@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gumilang/container_widget/container_widget.dart';
 import 'package:flutter_gumilang/container_widget/latihan_container.dart';
 import 'package:flutter_gumilang/size_box_Stack/ExpandedWidget.dart';
+import 'package:flutter_gumilang/size_box_Stack/LatihanLayout.dart';
 import 'package:flutter_gumilang/size_box_Stack/LayoutDua.dart';
 import 'package:flutter_gumilang/size_box_Stack/LayoutEmpat.dart';
 import 'package:flutter_gumilang/size_box_Stack/LayoutSatu.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           title: Text("Latihan"),
           backgroundColor: Colors.white,
         ), // AppBar
-        body: LayoutEmpat() // Center
+        body: Latihanlayout() // Center
       ) //Scaffold
     ); // MaterialApp
   }
