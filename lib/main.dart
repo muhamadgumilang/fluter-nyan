@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gumilang/container_widget/container_widget.dart';
 import 'package:flutter_gumilang/container_widget/latihan_container.dart';
+import 'package:flutter_gumilang/gridview/gird_basic.dart';
+import 'package:flutter_gumilang/gridview/grid_builder.dart';
+import 'package:flutter_gumilang/gridview/latihangrid.dart';
+import 'package:flutter_gumilang/listview_widget/latihan_view.dart';
+import 'package:flutter_gumilang/listview_widget/list_basic.dart';
+import 'package:flutter_gumilang/listview_widget/list_builder2.dart';
+import 'package:flutter_gumilang/listview_widget/list_builder_widget.dart';
+import 'package:flutter_gumilang/listview_widget/list_separated.dart';
 import 'package:flutter_gumilang/size_box_Stack/ExpandedWidget.dart';
 import 'package:flutter_gumilang/size_box_Stack/LatihanLayout.dart';
+import 'package:flutter_gumilang/size_box_Stack/Latihancopas.dart';
 import 'package:flutter_gumilang/size_box_Stack/LayoutDua.dart';
 import 'package:flutter_gumilang/size_box_Stack/LayoutEmpat.dart';
 import 'package:flutter_gumilang/size_box_Stack/LayoutSatu.dart';
@@ -31,7 +40,7 @@ class MyApp extends StatelessWidget {
           title: Text("Latihan"),
           backgroundColor: Colors.white,
         ), // AppBar
-        body: Latihanlayout() // Center
+        body: GridLatihanWidget() // Center
       ) //Scaffold
     ); // MaterialApp
   }
