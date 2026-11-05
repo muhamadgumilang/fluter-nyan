@@ -9,15 +9,18 @@ class ListBuilderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: partai.length,
-      itemBuilder: (context, index) {
-        return Container(
-        height: 400,
-        color: partaiColour[index],
-        child: Center(child: Text(partai[index].toString())),
-        );
-      },
+    return Scaffold(
+      appBar: AppBar(),
+        body:  ListView.builder(
+          itemCount: partai.length,
+          itemBuilder: (context, index) {
+            return Container(
+            height: 400,
+            color: partaiColour[index],
+            child: Center(child: Text(partai[index].toString())),
+            );
+          },
+        ),
     );
   }
 }

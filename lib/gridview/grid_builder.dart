@@ -32,34 +32,38 @@ class GridBuilderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      padding: EdgeInsets.all(10),
-      itemCount: produk.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 8,
-        childAspectRatio: 1,
-        ),
-        itemBuilder: (context, index) {
-          final data = produk[index];
-
-          return Card(
-            elevation: 3,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(data['icon'], size: 60, color: data['warna']),
-                SizedBox(height: 10),
-                Text(
-                  data['nama'],
-                  style: TextStyle(fontSize: 24, fontWeight:.bold),
-                ),
-                Text("Rp. ${data['harga']}"),
-              ],
+    return Scaffold(
+      appBar: AppBar(),
+        body:  GridView.builder(
+          padding: EdgeInsets.all(10),
+          itemCount: produk.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            childAspectRatio: 1,
             ),
-          );
-        },
+            itemBuilder: (context, index) {
+              final data = produk[index];
+        
+              return Card(
+                elevation: 3,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(data['icon'], size: 60, color: data['warna']),
+                    SizedBox(height: 10),
+                    Text(
+                      data['nama'],
+                      style: TextStyle(fontSize: 24, fontWeight:.bold),
+                    ),
+                    Text("Rp. ${data['harga']}"),
+                  ],
+                ),
+              );
+            },
+        ),
+      
     );
   }
 }

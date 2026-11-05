@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gumilang/Navigation/contoh_nav.dart';
 import 'package:flutter_gumilang/container_widget/container_widget.dart';
 import 'package:flutter_gumilang/container_widget/latihan_container.dart';
 import 'package:flutter_gumilang/gridview/gird_basic.dart';
@@ -34,14 +35,26 @@ class MyApp extends StatelessWidget {
   @override 
   Widget build(BuildContext Context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar : AppBar(
-          title: Text("Latihan"),
-          backgroundColor: Colors.white,
-        ), // AppBar
-        body: GridLatihanWidget() // Center
-      ) //Scaffold
+      initialRoute: '/',
+      routes: {
+        // Maping From route name to page
+        '/':(context) => Contoh(),
+        '/grid':(context) => GridBuilderWidget(),
+        '/list' :(context) => ListBuilderWidget(),
+        '/latihanlist' :(context) => LatihanView(),
+        '/latihanrowcolumn' :(context) => Latihan(),
+        '/latihansizebox' :(context) => LatihanPakaceDua(),
+       
+
+      },
+
+
+      // debugShowCheckedModeBanner: false,
+      // home: Scaffold(appBar : AppBar( title: Text("Latihan"),
+      //     backgroundColor: Colors.white,
+      //   ), // AppBar
+      //   body: Contoh() // Center
+      // ) //Scaffold
     ); // MaterialApp
   }
 }
