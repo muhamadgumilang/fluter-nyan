@@ -2,12 +2,13 @@
 import 'package:flutter/material.dart';
 
 class HasilPage extends StatelessWidget {
-  final String nama, email, ekskul, gender;
+  final String nama, email, tglDaftar, ekskul, gender;
 
   const HasilPage({
     super.key,
     required this.nama,
     required this.email,
+    required this.tglDaftar,
     required this.ekskul,
     required this.gender,
   });
@@ -23,8 +24,10 @@ class HasilPage extends StatelessWidget {
           children: [
             Text('Nama: $nama'),
             Text('Email: $email'),
+            Text('Tanggal Daftar: $tglDaftar'),
             Text('Ekskul: $ekskul'),
             Text('Jenis kelamin: $gender'),
+      
           ],
         ),
       ),

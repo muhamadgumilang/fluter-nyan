@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
+import 'package:flutter/material.dart';
 import 'package:flutter_gumilang/pages/form_output_page.dart';
+import 'package:intl/intl.dart';
 
 class FormEkskul extends StatefulWidget {
   const new({super.key});
@@ -12,6 +15,15 @@ class _FormEkskulState extends State<FormEkskul> {
   final _formKey = GlobalKey<FormState>();
   final _namaC = TextEditingController();
   final _emailC = TextEditingController();
+
+  final tglDaftar = TextEditingController();
+
+  @override
+  void initState() {
+    tglDaftar.text = '';
+    super.initState();
+  }
+
   String? _ekskul;
   String _gender = 'Laki-laki';
   bool _setuju = false;
@@ -39,6 +51,7 @@ class _FormEkskulState extends State<FormEkskul> {
             email: _emailC.text,
             ekskul: _ekskul!,
             gender: _gender,
+            tglDaftar: tglDaftar.text,
           ),
         ),
       );
@@ -79,6 +92,32 @@ class _FormEkskulState extends State<FormEkskul> {
                   if (v == null || v.isEmpty) return 'Email tidak boleh kosong';
                   if (!v.contains('@')) return 'Format email tidak valid';
                   return null;
+                },
+              ),
+              const SizedBox(height: 16,),
+              TextFormField(
+                controller: tglDaftar,
+                decoration: InputDecoration(
+                  hintText: "Tanggal Daftar",
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  if (value!.isEmpty) return 'input Tanggal Lahir';
+                  return null;
+                },
+                readOnly: true,
+                onTap: () async {
+                  DateTime? pickedDate = await showDatePicker(
+                    context: context,
+                    initialDate: DateTime.now(),
+                    firstDate: DateTime(1900),
+                    lastDate: DateTime(2100),
+                    );
+                    if (pickedDate != null) {
+                      setState(() {
+                        tglDaftar.text = DateFormat('yyyy-MM-dd').format(pickedDate);
+                      });
+                    }
                 },
               ),
               const SizedBox(height: 16),

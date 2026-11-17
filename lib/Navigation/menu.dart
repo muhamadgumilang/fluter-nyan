@@ -18,7 +18,6 @@ class Contoh extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               // HEADER
               Container(
                 width: double.infinity,
@@ -64,10 +63,7 @@ class Contoh extends StatelessWidget {
 
                     const Text(
                       "Selamat Datang,",
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 16,
-                      ),
+                      style: TextStyle(color: Colors.white70, fontSize: 16),
                     ),
 
                     const SizedBox(height: 8),
@@ -101,7 +97,6 @@ class Contoh extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-
                     const Text(
                       "Menu Pembelajaran",
                       style: TextStyle(
@@ -115,10 +110,7 @@ class Contoh extends StatelessWidget {
 
                     const Text(
                       "Pilih materi latihan yang ingin kamu pelajari.",
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.grey,
-                      ),
+                      style: TextStyle(fontSize: 13, color: Colors.grey),
                     ),
 
                     const SizedBox(height: 22),
@@ -174,10 +166,7 @@ class Contoh extends StatelessWidget {
                       title: "Latihan Row & Column",
                       subtitle: "Belajar mengatur posisi widget",
                       onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/latihanrowcolumn',
-                        );
+                        Navigator.pushNamed(context, '/latihanrowcolumn');
                       },
                     ),
 
@@ -188,23 +177,27 @@ class Contoh extends StatelessWidget {
                       title: "Latihan SizedBox",
                       subtitle: "Belajar mengatur ukuran dan jarak",
                       onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/latihanpakacedua',
-                        );
+                        Navigator.pushNamed(context, '/latihanpakacedua');
                       },
                     ),
 
-                     menuCard(
+                    menuCard(
                       context,
                       icon: Icons.aspect_ratio_rounded,
                       title: "Formulir",
                       subtitle: "Formulir",
                       onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/FormEkskul',
-                        );
+                        Navigator.pushNamed(context, '/FormEkskul');
+                      },
+                    ),
+
+                    menuCard(
+                      context,
+                      icon: Icons.library_books_rounded,
+                      title: "Perpustakaan",
+                      subtitle: "Latihan Membuat Perpustakaan",
+                      onTap: () {
+                        Navigator.pushNamed(context, '/Perpustakaan');
                       },
                     ),
 
@@ -251,7 +244,6 @@ class Contoh extends StatelessWidget {
             padding: const EdgeInsets.all(17),
             child: Row(
               children: [
-
                 // ICON
                 Container(
                   height: 55,
@@ -260,11 +252,7 @@ class Contoh extends StatelessWidget {
                     color: const Color(0xFFEEF1F8),
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Icon(
-                    icon,
-                    color: navy,
-                    size: 27,
-                  ),
+                  child: Icon(icon, color: navy, size: 27),
                 ),
 
                 const SizedBox(width: 15),
