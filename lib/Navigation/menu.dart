@@ -201,6 +201,16 @@ class Contoh extends StatelessWidget {
                       },
                     ),
 
+                    menuCard(
+                      context,
+                      icon: Icons.album_outlined,
+                      title: "Album",
+                      subtitle: "Latihan Membuat Album",
+                      onTap: () {
+                        Navigator.pushNamed(context, '/AlbumPage');
+                      },
+                    ),
+
                     const SizedBox(height: 25),
 
                     Center(

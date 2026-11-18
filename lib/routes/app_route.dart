@@ -4,6 +4,7 @@ import 'package:flutter_gumilang/gridview/latihangrid.dart';
 import 'package:flutter_gumilang/listview_widget/latihan_view.dart';
 import 'package:flutter_gumilang/listview_widget/list_basic.dart';
 import 'package:flutter_gumilang/listview_widget/list_builder_widget.dart';
+import 'package:flutter_gumilang/pages/album_page.dart';
 import 'package:flutter_gumilang/pages/formulir_input_page.dart';
 import 'package:flutter_gumilang/pages/perpus_input_page.dart';
 import 'package:flutter_gumilang/row_column_widget/latihan.dart';
@@ -18,6 +19,7 @@ class AppRoute {
   static const sizebox = '/latihanpakacedua';
   static const formulir = '/FormEkskul';
   static const perpustakaan = '/Perpustakaan';
+  static const album = '/AlbumPage';
 
   static Map<String, WidgetBuilder> routes = {
     menu: (context) => Contoh(),
@@ -27,5 +29,6 @@ class AppRoute {
     sizebox: (context) => LatihanPakaceDua(),
     formulir: (context) => FormEkskul(),
     perpustakaan: (context) => Perpustakaan(),
+    album: (context) => AlbumPage(),
   };
 }
