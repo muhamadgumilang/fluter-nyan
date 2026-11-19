@@ -211,6 +211,28 @@ class Contoh extends StatelessWidget {
                       },
                     ),
 
+                    menuCard(
+                      context,
+                      icon: Icons.post_add_rounded,
+                      title: "Post",
+                      subtitle: "Latihan Membuat Post",
+                      onTap: () {
+                        Navigator.pushNamed(context, '/PostPage');
+                      },
+                    ),
+
+                     menuCard(
+                      context,
+                      icon: Icons.post_add_rounded,
+                      title: "Comments",
+                      subtitle: "Latihan Membuat Comments",
+                      onTap: () {
+                        Navigator.pushNamed(context, '/CommentsPage');
+                      },
+                    ),
+
+                    
+
                     const SizedBox(height: 25),
 
                     Center(

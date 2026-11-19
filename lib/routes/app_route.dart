@@ -5,8 +5,10 @@ import 'package:flutter_gumilang/listview_widget/latihan_view.dart';
 import 'package:flutter_gumilang/listview_widget/list_basic.dart';
 import 'package:flutter_gumilang/listview_widget/list_builder_widget.dart';
 import 'package:flutter_gumilang/pages/album_page.dart';
+import 'package:flutter_gumilang/pages/comments_page.dart';
 import 'package:flutter_gumilang/pages/formulir_input_page.dart';
 import 'package:flutter_gumilang/pages/perpus_input_page.dart';
+import 'package:flutter_gumilang/pages/post_page.dart';
 import 'package:flutter_gumilang/row_column_widget/latihan.dart';
 import 'package:flutter_gumilang/size_box_Stack/LatihanLayout.dart';
 import 'package:flutter_gumilang/size_box_Stack/Latihancopas.dart';
@@ -20,7 +22,9 @@ class AppRoute {
   static const formulir = '/FormEkskul';
   static const perpustakaan = '/Perpustakaan';
   static const album = '/AlbumPage';
-
+  static const post = '/PostPage';
+  static const commments = '/CommentsPage'
+;
   static Map<String, WidgetBuilder> routes = {
     menu: (context) => Contoh(),
     list: (context) => LatihanView(),
@@ -30,5 +34,7 @@ class AppRoute {
     formulir: (context) => FormEkskul(),
     perpustakaan: (context) => Perpustakaan(),
     album: (context) => AlbumPage(),
+    post: (context) => PostPage(),
+    commments:(context) => CommentsPage(),
   };
 }
